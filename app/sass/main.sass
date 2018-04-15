@@ -53,8 +53,9 @@ b, strong
 	&__row
 		display: flex
 		align-items: center
+		flex-wrap: wrap
 	&__day
-		width: 120px
+		width: 115px
 		min-height: 95px
 		position: relative
 		background: #e7f3cf
@@ -102,7 +103,7 @@ b, strong
 		background: $table-weekend-BG
 	&__notes
 		position: relative
-		top: 10px
+		top: 20px
 		left: -13px
 		z-index: 100
 		transform: rotate(1deg)
@@ -116,5 +117,15 @@ b, strong
 			width: 100%
 			height: 490px
 			background-color: $table-notes-BG
+			&:before
+				content: ""
+				width: 280px
+				height: 535px
+				position: absolute
+				top: -22px
+				left: -26px
+				z-index: -1
+				background: $table-notes-overlay-BG
+
 
 @import "media" // Always at the end
